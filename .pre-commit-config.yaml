@@ -8,7 +8,7 @@ repos:
         pass_filenames: false
         stages: [commit]
       - id: make migrations
-        name: requirements
+        name: make migrations
         entry: bash -c '.venv/Scripts/python pixmessages/manage.py makemigrations api; git add pixmessages/api/migrations'
         language: system
         pass_filenames: false
