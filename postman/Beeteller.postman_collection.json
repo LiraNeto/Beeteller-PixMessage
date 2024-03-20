@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "7f104dc4-47c8-4f2c-9927-b4c222009cdc",
+		"name": "Beeteller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4286439"
+	},
+	"item": [
+		{
+			"name": "Read Pix",
+			"item": [
+				{
+					"name": "Start Pix message recovery",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pix/:ispb/stream/start",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pix",
+								":ispb",
+								"stream",
+								"start"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "32074980"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Pix message recovery - multipart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pix/:ispb/stream/start",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pix",
+								":ispb",
+								"stream",
+								"start"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "32074980"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull Next",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pix/:ispb/stream/:interationID",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pix",
+								":ispb",
+								"stream",
+								":interationID"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "32074986"
+								},
+								{
+									"key": "interationID",
+									"value": "r5xm3qeGFDvw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull Next - multipart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pix/:ispb/stream/:interationID",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pix",
+								":ispb",
+								"stream",
+								":interationID"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "32074980"
+								},
+								{
+									"key": "interationID",
+									"value": "PPzbkKTwWDJw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop Pix message recovery",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pix/:ispb/stream/:interationID",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pix",
+								":ispb",
+								"stream",
+								":interationID"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "32074980"
+								},
+								{
+									"key": "interationID",
+									"value": "UTXJQuZWB8zQ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Pix",
+			"item": [
+				{
+					"name": "Create Pix",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/util/msgs/:ispb/:qty",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"util",
+								"msgs",
+								":ispb",
+								":qty"
+							],
+							"variable": [
+								{
+									"key": "ispb",
+									"value": "teste1"
+								},
+								{
+									"key": "qty",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/ping"
+			},
+			"response": []
+		}
+	]
+}
