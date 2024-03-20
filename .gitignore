@@ -1,0 +1,6 @@
+.venv
+__pycache__
+
+# If you are using PyCharm #
+# User-specific stuff
+.idea/*
