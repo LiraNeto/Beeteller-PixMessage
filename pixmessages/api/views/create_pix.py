@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from pixmessages.api.serializers.pix_message_serializer import get_pix_message_serializer
+from api.serializers.pix_message_serializer import get_pix_message_serializer
 
 
 @api_view(['POST'])

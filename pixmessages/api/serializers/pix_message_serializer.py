@@ -1,8 +1,7 @@
 from rest_framework import serializers
 
-from api.models.PixMessageModel import get_pix_messages_model
-from api.models.PersonModel import *
-from api.serializers.person import PersonSerializer
+from api.models import get_pix_messages_model, Person
+from api.serializers.person_serializer import PersonSerializer
 
 
 def get_pix_message_serializer(_db_table):

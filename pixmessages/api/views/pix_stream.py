@@ -8,9 +8,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.utils.serializer_helpers import ReturnDict
 
-from pixmessages.api.caches.ispb_collector import check_ispb_limit, stop_collecting
-from pixmessages.api.models import Interaction, get_pix_messages_model
-from pixmessages.api.serializers.pix_message_serializer import get_pix_message_serializer
+from api.caches.ispb_collector import check_ispb_limit, stop_collecting
+from api.models import Interaction, get_pix_messages_model
+from api.serializers.pix_message_serializer import get_pix_message_serializer
 
 waiting_time = 5
 

@@ -17,6 +17,27 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from api.views.create_pix import create_pix
+from api.views.ping import ping
+from api.views.pix_stream import start, read
+
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+from rest_framework import permissions
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Beeteller - Pix Messages API",
+        default_version='v1',),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ping/', ping),
+    path('api/pix/<ispb>/stream/start', start),
+    path('api/pix/<ispb>/stream/<interation_id>', read),
+    path('api/util/msgs/<ispb>/<qty>', create_pix),
+    path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
